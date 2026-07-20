@@ -10,15 +10,50 @@
 
 ## 바로 시작하기
 
+1. [ZIP 파일을 내려받아](https://github.com/seolbbb/write-korean-cover-letter/archive/refs/heads/main.zip) 압축을 풉니다.
+2. 압축을 푼 폴더에서 터미널을 엽니다.
+3. 아래에서 사용하는 에이전트의 명령 하나만 복사해 실행합니다.
+
+### Codex
+
 ```bash
-npx skills add seolbbb/write-korean-cover-letter --skill write-korean-cover-letter -g
+npx skills add . --skill write-korean-cover-letter -g -a codex -y
 ```
 
-자기소개서 자료를 모아 둔 폴더에서 사용하는 에이전트를 실행합니다.
+### Claude Code
 
 ```bash
-cd <자기소개서 경험 정리 폴더>
-codex  # 또는 claude, agy, kimi, gemini, opencode
+npx skills add . --skill write-korean-cover-letter -g -a claude-code -y
+```
+
+### Antigravity CLI
+
+```bash
+npx skills add . --skill write-korean-cover-letter -g -a antigravity-cli -y
+```
+
+### Kimi Code CLI
+
+```bash
+npx skills add . --skill write-korean-cover-letter -g -a kimi-code-cli -y
+```
+
+### Gemini CLI
+
+```bash
+npx skills add . --skill write-korean-cover-letter -g -a gemini-cli -y
+```
+
+### Cursor
+
+```bash
+npx skills add . --skill write-korean-cover-letter -g -a cursor -y
+```
+
+### OpenCode
+
+```bash
+npx skills add . --skill write-korean-cover-letter -g -a opencode -y
 ```
 
 첫 요청은 이 정도면 충분합니다.
@@ -28,22 +63,6 @@ write-korean-cover-letter Skill을 사용해 이 폴더의 경험 자료를 먼�
 그다음 아래 공고와 문항에 맞는 경험을 배분하고 자기소개서 초안을 작성해줘.
 사실이 불분명하면 지어내지 말고 확인이 필요한 항목으로 분리해줘.
 ```
-
-### 여러 에이전트에 한 번에 설치
-
-```bash
-npx skills add seolbbb/write-korean-cover-letter --skill write-korean-cover-letter -g -a codex -a claude-code -a antigravity-cli -a kimi-code-cli -a gemini-cli -a cursor -a opencode
-```
-
-| 에이전트 | 설치 대상 | 실행·호출 |
-|---|---|---|
-| Codex | `codex` | Codex App에서 폴더를 열거나 `codex`를 실행하고 `$write-korean-cover-letter` 호출 |
-| Claude Code | `claude-code` | 폴더에서 `claude`를 실행하고 `/write-korean-cover-letter` 호출 |
-| Antigravity CLI | `antigravity-cli` | 폴더에서 `agy`를 실행하고 `/skills`에서 확인하거나 자연어로 요청 |
-| Kimi Code CLI | `kimi-code-cli` | 폴더에서 `kimi`를 실행하고 `/skill:write-korean-cover-letter` 호출 |
-| Gemini CLI | `gemini-cli` | 폴더에서 `gemini`를 실행하고 자연어로 Skill 사용 요청 |
-| Cursor | `cursor` | 해당 폴더를 열고 Agent 채팅에서 Skill 사용 요청 |
-| OpenCode | `opencode` | 폴더에서 `opencode`를 실행하고 자연어로 Skill 사용 요청 |
 
 프로젝트 안에서만 쓰려면 설치 명령의 `-g`를 뺍니다. 설치 도구와 지원 에이전트 목록은 [`vercel-labs/skills`](https://github.com/vercel-labs/skills)에서 확인할 수 있습니다.
 
