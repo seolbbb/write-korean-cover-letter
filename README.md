@@ -10,61 +10,21 @@
 
 ## 바로 시작하기
 
-1. [ZIP 파일을 내려받아](https://github.com/seolbbb/write-korean-cover-letter/archive/refs/heads/main.zip) 압축을 풉니다.
-2. 압축을 푼 폴더에서 터미널을 엽니다.
-3. 아래에서 사용하는 에이전트의 명령 하나만 복사해 실행합니다.
-
-### Codex
+### Claude Code · Codex CLI — 클론 + 스크립트
 
 ```bash
-npx skills add . --skill write-korean-cover-letter -g -a codex -y
+git clone https://github.com/seolbbb/write-korean-cover-letter.git
+cd write-korean-cover-letter
+./install.sh
 ```
 
-### Claude Code
+- 설치된 `claude`와 `codex`를 자동 감지해 전역 Skill 경로에 심링크합니다.
+- Claude Code: `/write-korean-cover-letter` · Codex: `$write-korean-cover-letter`
+- 한쪽만 설치: `./install.sh --claude-only` 또는 `./install.sh --codex-only`
+- 제거: `./uninstall.sh`
+- 업데이트: `./update.sh` — 새 버전을 확인해 `git pull` 후 재설치합니다. `./update.sh --check`은 업데이트 유무만 확인합니다.
 
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a claude-code -y
-```
-
-### Antigravity CLI
-
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a antigravity-cli -y
-```
-
-### Kimi Code CLI
-
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a kimi-code-cli -y
-```
-
-### Gemini CLI
-
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a gemini-cli -y
-```
-
-### Cursor
-
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a cursor -y
-```
-
-### OpenCode
-
-```bash
-npx skills add . --skill write-korean-cover-letter -g -a opencode -y
-```
-
-첫 요청은 이 정도면 충분합니다.
-
-```text
-write-korean-cover-letter Skill을 사용해 이 폴더의 경험 자료를 먼저 읽어줘.
-그다음 아래 공고와 문항에 맞는 경험을 배분하고 자기소개서 초안을 작성해줘.
-사실이 불분명하면 지어내지 말고 확인이 필요한 항목으로 분리해줘.
-```
-
-프로젝트 안에서만 쓰려면 설치 명령의 `-g`를 뺍니다. 설치 도구와 지원 에이전트 목록은 [`vercel-labs/skills`](https://github.com/vercel-labs/skills)에서 확인할 수 있습니다.
+Windows에서는 WSL 또는 개발자 모드가 켜진 Git Bash에서 실행하세요. 심링크 권한이 없으면 스크립트가 설치를 중단합니다.
 
 ## 이 Skill이 하는 일
 
